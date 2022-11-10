@@ -36,6 +36,7 @@ h1{
   outline: none;
   width: 100%;
   overflow-y: scroll;
+  margin-bottom:1rem;
 }
 
 .select > option:active {
