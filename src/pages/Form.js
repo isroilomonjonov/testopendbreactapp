@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AppContext from "../context/AppContext";
 import useInput from "../hooks/useInput";
 const Form = () => {
@@ -37,43 +37,50 @@ const Form = () => {
       {!loader ? (
         <form onSubmit={submitHandler}>
           <h1>Test</h1>
-          <div className="div-select">    <select className="select" value={select} onChange={selectChangeHandler}>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select></div>
-        <div className="div-select">
+          <div className="div-select">
             <select
-            className="select"
-            value={selectAmount}
-            onChange={selectAmountChangeHandler}
-          >
-            <option value={10}>10</option>
-            <option value={20}>20</option>
-            <option value={30}>30</option>
-          </select>
-        </div>
-        <div className="div-select">
+              className="select"
+              value={select}
+              onChange={selectChangeHandler}
+            >
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <div className="div-select">
             <select
-            className="select"
-            value={selectCaregory}
-            onChange={selectCategoryChangeHandler}
-          >
-            <option value={23}>History</option>
-            <option value={21}>Sports</option>
-            <option value={22}>Politics</option>
-          </select>
-        </div>
-        <div className="div-select"> <button className="button-23">Submit</button></div>
-         
+              className="select"
+              value={selectAmount}
+              onChange={selectAmountChangeHandler}
+            >
+              <option value={10}>10</option>
+              <option value={20}>20</option>
+              <option value={30}>30</option>
+            </select>
+          </div>
+          <div className="div-select">
+            <select
+              className="select"
+              value={selectCaregory}
+              onChange={selectCategoryChangeHandler}
+            >
+              <option value={23}>History</option>
+              <option value={21}>Sports</option>
+              <option value={22}>Politics</option>
+            </select>
+          </div>
+          <div className="div-select">
+            <button className="button-23">Submit</button>
+          </div>
         </form>
       ) : (
         <div
           style={{
-            position: 'absolute',
-            top:"50%",
-            left:"50%",
-            transform: 'translate(-50%,-50%)'
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
           }}
         >
           <RotatingLines
@@ -86,7 +93,6 @@ const Form = () => {
           />
         </div>
       )}
- 
     </div>
   );
 };
